@@ -71,14 +71,18 @@ boxplot(hwy ~ cyl, data = mpg)
 ``` 
 We see a negative relationship between the number of highway miles per gallon and the number of cylinders present. All else being held equal, an increase in the number of cylinders will lead to a decrease in the median number of highway miles per gallon.     
 
-
 ```{r}
- install.packages("corrplot")
-mpg_numeric <- as.numeric(unlist(mpg))
-head(mpg_numeric)
-M<-cor(mpg_numeric)
-head(round(M,2)
-corrplot(M, type="lower")
+
+df = subset(mpg, select = -c(manufacturer, displ, drv, model, trans, fl, class) )
+df
+install.packages("corrplot")
+mpg_numeric <- round(cor(df),2)
+lower.tri(df, diag = FALSE)
 
 ```
+
+We see correlation for the vast majority of variables within the mpg dataset. We see that all of the variables are correlated with each other and it is difficult to determine which correlations are positive and which correlations are negative.
+
+
+
 
