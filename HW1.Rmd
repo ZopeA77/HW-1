@@ -61,23 +61,15 @@ The scatterplot indicates a positive and linear relationship between hwy and cty
 
 
 ```{r}
- ggplot(mpg, aes(manufacturer)) + geom_bar() + coord_flip() 
-
+ ggplot(mpg, aes(x= reorder(manufacturer, manufacturer, function(x)- length(x)))) + geom_bar() + coord_flip() 
 ```
+Dodge produced the most cars and Lincoln produced the least. 
 
 
 ```{r}
- ggplot(mpg, aes(x=hwy,fill=cyl)) + 
-  geom_boxplot()
-```
-```{r}
- #ggplot(mpg, aes(x=cyl, y= hwy, fill=cyl)) + 
-  #geom_boxplot()
-boxplot(hwy ~ cyl, data = mpg,col = c("blue", "yellow", "green","blue"))
+boxplot(hwy ~ cyl, data = mpg)
 ``` 
-
-
-
+We see a negative relationship between the number of highway miles per gallon and the number of cylinders present. All else being held equal, an increase in the number of cylinders will lead to a decrease in the median number of highway miles per gallon.     
 
 
 ```{r}
