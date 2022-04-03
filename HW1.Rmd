@@ -72,10 +72,8 @@ boxplot(hwy ~ cyl, data = mpg)
 We see a negative relationship between the number of highway miles per gallon and the number of cylinders present. All else being held equal, an increase in the number of cylinders will lead to a decrease in the median number of highway miles per gallon.     
 
 ```{r}
-
 df = subset(mpg, select = -c(manufacturer, displ, drv, model, trans, fl, class) )
-df
-install.packages("corrplot")
+#install.packages("corrplot")
 mpg_numeric <- round(cor(df),2)
 lower.tri(df, diag = FALSE)
 
