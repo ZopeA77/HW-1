@@ -64,7 +64,7 @@ The scatterplot indicates a positive and linear relationship between hwy and cty
 
 
 ```{r}
- ggplot(mpg, aes(x= reorder(manufacturer, manufacturer, function(x)- length(x)))) + geom_bar() + coord_flip()
+ ggplot(mpg, aes(x= reorder(manufacturer, manufacturer, function(x)- length(x)))) + geom_bar() + coord_flip()   
 ```
 
 
