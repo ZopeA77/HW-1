@@ -86,6 +86,7 @@ lower.tri(df, diag = FALSE)
 
 ```
 
+We see that the vast majority of variables tend to be related here. However, due to the nature of the correlation matrix, it is difficult to determine which variables are related 
 We see that, in the vast majority of cases, the different elements of the dataset seem to be correlated. However, due to the nature of the lower triangular matrix, it is very difficult to determine whether the relationship here is positive or negative.  
 
 
