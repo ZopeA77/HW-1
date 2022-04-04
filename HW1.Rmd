@@ -88,5 +88,5 @@ lower.tri(df, diag = FALSE)
 
 We see that, in the vast majority of cases, the different elements of the dataset seem to be correlated. However, due to the nature of the lower triangular matrix, it is very difficult to determine whether the relationship here is positive or negative.  
 
-Why isn't this working
+
 
