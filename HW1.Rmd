@@ -57,18 +57,25 @@ The histogram tells us that we see the highest amount of vehicles lie between 25
 ```{r}
 ggplot(mpg, aes(x= hwy, y = cty)) + geom_point()
 ```
+
+
 The scatterplot indicates a positive and linear relationship between hwy and cty. This indicates that for each highway mile per gallon increase, we should see a roughly constant increase in the corresponding city miles per gallon, all else being held equal.
+
 
 
 ```{r}
  ggplot(mpg, aes(x= reorder(manufacturer, manufacturer, function(x)- length(x)))) + geom_bar() + coord_flip() 
 ```
+
+
 Dodge produced the most cars and Lincoln produced the least. 
 
 
 ```{r}
 boxplot(hwy ~ cyl, data = mpg)
 ``` 
+
+
 We see a negative relationship between the number of highway miles per gallon and the number of cylinders present. All else being held equal, an increase in the number of cylinders will lead to a decrease in the median number of highway miles per gallon.     
 
 ```{r}
@@ -79,8 +86,7 @@ lower.tri(df, diag = FALSE)
 
 ```
 
-We see correlation for the vast majority of variables within the mpg dataset. We see that all of the variables are correlated with each other and it is difficult to determine which correlations are positive and which correlations are negative.
-
+We see that, in the vast majority of cases, the different elements of the dataset seem to be correlated. However, due to the nature of the lower triangular matrix, it is very difficult to determine whether the relationship here is positive or negative.  
 
 
 
